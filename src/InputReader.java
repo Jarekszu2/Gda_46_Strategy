@@ -1,4 +1,5 @@
 import strategies.IInputStrategy;
+import strategies.NoDoubleException;
 
 public class InputReader {
     private IInputStrategy strategy;
@@ -9,7 +10,7 @@ public class InputReader {
     public String requestString(){
         return strategy.getString();
     }
-    public double requestDouble(){
+    public double requestDouble() throws NoDoubleException {
         return strategy.getDouble();
     }
 
